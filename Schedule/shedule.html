@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Schedule Your Free Strategy Call</title>
+  <link rel="stylesheet" href="shedule.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-pIVf12X1Jopl8x9MZQOmrKfBB9uvmXGY+DFO2Tk5bzJ3eENyUnQ1I9eMkxlwVnfN7izDaRDDyz6bbEBXk8oKeg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <img style="width: 70px; border-radius: 50%;" src="/assests/WhatsApp Image 2025-05-25 at 8.17.12 PM.jpeg" alt="">
+      <nav class="main-nav">
+        <a href="/index.html">Home</a>
+        <a href="shedule.html" class="active">Schedule</a>
+        <a href="/Sucess/sucess.html">Success</a>
+      </nav>
+      <a href="#" class="btn btn-primary">Get Started</a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Schedule Your Free Strategy Call</h1>
+      <p class="subtitle">
+        Get personalized insights and strategies tailored to your business goals in a free one-on-one consultation
+      </p>
+    </div>
+  </section>
+
+  <!-- INVESTMENT JOURNEY -->
+  <section class="investment-journey">
+    <div class="container two-col">
+      <div class="form-card">
+        <h2>Start Your Investment Journey</h2>
+        <p class="subtitle">
+          Take the first step toward building a secure financial future. Invest in a world-class
+          portfolio designed to deliver consistent returns and long-term growth.
+        </p>
+        <form id="journey-form">
+          <label>
+            Full Name <span class="required">*</span>
+            <input type="text" name="fullname" placeholder="Enter your full name" required>
+          </label>
+          <label>
+            Email Address <span class="required">*</span>
+            <input type="email" name="email" placeholder="Enter your email address" required>
+          </label>
+          <div id="guests">
+            <div class="guests-header">
+              <span>Guests</span>
+              <button type="button" id="add-guest">+ Add Guest</button>
+            </div>
+          </div>
+
+          <fieldset>
+            <legend>Capital Investment</legend>
+            <label><input type="radio" name="capital" value="<50K"> Under $50K</label>
+            <label><input type="radio" name="capital" value="50K-100K"> $50K–$100K</label>
+            <label><input type="radio" name="capital" value="100K-500K"> $100K–$500K</label>
+            <label><input type="radio" name="capital" value="500K-1M"> $500K–$1M</label>
+            <label><input type="radio" name="capital" value="1M+"> $1M+</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Annual Income</legend>
+            <label><input type="radio" name="income" value="<100K"> Under $100K</label>
+            <label><input type="radio" name="income" value="100K-500K"> $100K–$500K</label>
+            <label><input type="radio" name="income" value="500K-1M"> $500K–$1M</label>
+            <label><input type="radio" name="income" value="1M+"> $1M+</label>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary">Submit Application</button>
+        </form>
+      </div>
+
+      <div class="info-card">
+        <div class="author">
+          <img style="width: 80px; height: 80px;" src="/assests/images.jpg" alt="Jonathan Blackwell">
+          <div>
+            <h3>Jonathan Blackwell</h3>
+            <small>Chief Investment Officer</small>
+          </div>
+        </div>
+        <h2>Why Invest With Us</h2>
+        <p>
+          World Class® offers accredited investors the opportunity to participate in our exclusive real estate
+          portfolio that spans prime locations across major global markets.
+        </p>
+        <p>
+          Our investment strategy focuses on acquiring high-value properties with strong appreciation potential
+          and consistent cash flow generation, providing you with both immediate returns and long-term growth.
+        </p>
+        <p>As a World Class® investor, you'll gain access to:</p>
+        <ul>
+          <li>Curated portfolio of luxury properties in prime global locations</li>
+          <li>Quarterly dividend distributions from rental income</li>
+          <li>Exclusive stay privileges at select properties within our network</li>
+          <li>Personalized investment advisory services</li>
+          <li>Regular performance reports and market insights</li>
+        </ul>
+        <p>
+          Join our community of sophisticated investors who understand the value of tangible assets in
+          building generational wealth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULING WIDGET -->
+  <section class="scheduler">
+    <div class="container two-col">
+      <div class="calendar">
+        <div class="calendar-header">
+          <button id="prev-month">&lsaquo;</button>
+          <h3 id="month-year"></h3>
+          <button id="next-month">&rsaquo;</button>
+        </div>
+        <div class="calendar-grid">
+          <!-- JS populates days -->
+        </div>
+      </div>
+      <div class="times">
+        <p class="your-timezone"><span>🕒</span>Your timezone: <strong>UTC (UTC)</strong></p>
+        <h3 id="selected-date">— Select a date —</h3>
+        <div class="time-slots">
+          <button class="time-slot">9:00 AM</button>
+          <button class="time-slot">10:00 AM</button>
+          <button class="time-slot">11:00 AM</button>
+          <button class="time-slot">12:00 PM</button>
+          <button class="time-slot">1:00 PM</button>
+          <button class="time-slot">2:00 PM</button>
+          <button class="time-slot">3:00 PM</button>
+          <button class="time-slot">4:00 PM</button>
+        </div>
+        <button id="submit-schedule" class="btn btn-primary align-right">Submit</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Our Investors Say</h2>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="author">
+            <img style="width: 80px; height: 80px;" src="/assests/images.jpg" alt="Michael Richardson">
+            <div>
+              <h4>Michael Richardson</h4>
+              <small>Investor since 2021</small>
+            </div>
+          </div>
+          <p>
+            “The quarterly returns have consistently exceeded my expectations. What truly sets World
+            Class® apart is their transparency and the exclusive access to properties for personal use.”
+          </p>
+        </div>
+        <div class="testi-card">
+          <div class="author">
+            <img style="width: 80px; height: 80px;" src="/assests/images.jpg" alt="Sarah Chen">
+            <div>
+              <h4>Sarah Chen</h4>
+              <small>Investor since 2020</small>
+            </div>
+          </div>
+          <p>
+            “I've invested in several real estate funds, but World Class® offers something unique – a
+            perfect balance of strong financial returns and lifestyle benefits that align with my global
+            travel needs.”
+          </p>
+        </div>
+        <div class="testi-card">
+          <div class="author">
+            <img style="width: 80px; height: 80px;" src="/assests/images.jpg"  alt="Robert Kensington">
+            <div>
+              <h4>Robert Kensington</h4>
+              <small>Investor since 2019</small>
+            </div>
+          </div>
+          <p>
+            “As someone who values both financial growth and exceptional experiences, World Class® has
+            delivered on both fronts. Their property selection strategy is impeccable, focusing on locations
+            with consistent appreciation.”
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <footer class="footer-section">
+  <div class="footer-container">
+    <!-- Top Row: logo/tagline + socials -->
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="/assests/lgo.png" alt="DHM Logo" class="footer-logo">
+        <p class="footer-tagline">Delivering exceptional results since 2018</p>
+      </div>
+      <div class="footer-socials">
+        <a  href="#" class="social-link" aria-label="Facebook">
+          <img src="https://cdn.simpleicons.org/facebook/FFFFFF" alt="Facebook">
+        </a>
+        <a style="border-radius: 50px;" href="#" class="social-link" aria-label="Twitter">
+          <img src="/assests/download.png" alt="Twitter">
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram">
+          <img src="https://cdn.simpleicons.org/instagram/FFFFFF" alt="Instagram">
+        </a>
+        <a style="border-radius: 50px;" href="#" class="social-link" aria-label="LinkedIn">
+          <img src="/assests/images (1).jpg" alt="LinkedIn">
+        </a>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <!-- Bottom Row: copyright + nav links -->
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="#" class="footer-nav-link">Privacy Policy</a>
+        <a href="#" class="footer-nav-link">Terms of Service</a>
+        <a href="#" class="footer-nav-link">Contact Us</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+  <script src="shedule.js"></script>
+</body>
+</html>
